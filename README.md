@@ -1,3 +1,3 @@
-# HELLO-WORLD
-PRIMER REPOSITORY
-estoy haciendo mi primer repository
+# Python Projects
+En esta seccion los proyectos seran codificados en python
+con la intencion de compartir ideas y mejorar
