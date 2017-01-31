@@ -13,8 +13,10 @@ def texto(event):
 		puntuacion += 1
 		p.set(str(puntuacion))
 		cuenta, entrada = Nivel_1()
-		o.set(entrada)					
-
+		o.set(entrada)
+	else:
+		cuenta, entrada = Nivel_1()
+		o.set(entrada)		
 def iniciar():
 	global nivel
 	global cuenta
