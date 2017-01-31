@@ -1,12 +1,12 @@
 from Tkinter import *
 import time
 import random
-from sys import exit
-def texto(event):
-	input = resultado.get()
-	resultado.delete(0, END)
-	global cuenta
-	global entrada
+
+def texto(event):				#Funciona al presionar Enter despues de insertar una respuesta en el box(resultado) #
+	input = resultado.get()			#Guarda la respuesta del usuario, limpia el box(resultado), compara respuestas, ...
+	resultado.delete(0, END)		#...si la respuesta es correcta: manda un mensaje "correcto" en label(respuesta)...
+	global cuenta				#...actualiza la puntuacion en label(puntaje), llama la funcion Nivel_1(), y    ...
+	global entrada				#...muestra la nueva operacion en label(operacion)                                  #
 	global puntuacion
 	if cuenta == int(input):
 		r.set("Correcto")
@@ -15,7 +15,7 @@ def texto(event):
 		cuenta, entrada = Nivel_1()
 		o.set(entrada)					
 
-def iniciar():
+def iniciar():					#Funciona al presionar el boton Empezar
 	global nivel
 	global cuenta
 	global entrada
@@ -26,7 +26,7 @@ def iniciar():
 	temporizador()
 	empezar.configure(state='disabled')
 	
-def temporizador():
+def temporizador():				#Funciona al llamar la funcion iniciar()
 	if tiempo ==  True:
 		global counter
 		if puntuacion >= 5:
@@ -71,9 +71,6 @@ def Nivel_1():
 	if z == y:
 		acierto += 1
 	return y, z
-
-#lista = Nivel_1()       #los valores devueltos por Nivel_1 se pueden guardar en una lista
-#print (lista[1],lista[0]) #Accde por separado para que lo pongas en tus label
 	
 def Nivel_2():
 	a = generar_num()
