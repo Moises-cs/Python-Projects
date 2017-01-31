@@ -1,7 +1,7 @@
 from Tkinter import *
 import time
 import random
-
+from sys import exit
 def texto(event):
 	input = resultado.get()
 	resultado.delete(0, END)
