@@ -15,7 +15,7 @@ def texto(event):				#Funciona al presionar Enter despues de insertar una respue
 		cuenta, entrada = Nivel_1()
 		o.set(entrada)					
 
-def iniciar():					#Funciona al presionar el boton Empezar
+def iniciar():
 	global nivel
 	global cuenta
 	global entrada
@@ -26,7 +26,7 @@ def iniciar():					#Funciona al presionar el boton Empezar
 	temporizador()
 	empezar.configure(state='disabled')
 	
-def temporizador():				#Funciona al llamar la funcion iniciar()
+def temporizador():				
 	if tiempo ==  True:
 		global counter
 		if puntuacion >= 5:
